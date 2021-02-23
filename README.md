@@ -1,9 +1,9 @@
-# Composer Full
+## Composer Full
 
  - <a href="https://www.youtube.com/watch?v=_n57YVUVT2A&list=PLVSNL1PHDWvSrVzXyKxBc5cPM4sU7-c2T">Curso Composer</a> - Carlos Ferreira da Especializa TI
 
 
-## Requerimentos
+### Requerimentos
 
 - Install <a href="https://docs.docker.com/install/">Docker</a>
 
@@ -11,12 +11,12 @@
 
 - PHP >= 7.1
 
-- Postgres >= 9.4 ou Mysql >= 5.7
+- Postgres >= 11 ou Mysql >= 5.7
 
 
-## Instalação
-Realizar o git clone do projeto
-```bash
+#### Instalação
+Realizar o git clone do projeto:
+```
 git@github.com:viniciusmattosrj/composer-full.git
 ```
 
@@ -27,7 +27,7 @@ git config core.fileMode false
 
 Entre pelo terminal na pasta do projeto e rode:
 ```
-cp ./docker-compose-example.php  ./docker-compose.php
+cp -v ./docker-compose-example.php  ./docker-compose.php
 ```
 
 Agora suba o servidor:
@@ -81,10 +81,9 @@ Para o acesso no <strong>MYSQL</strong> database administration tool, use http:/
   - password:
 
 
-## Contribuições
-Caso identifique pontos
-que possam ser aprimorados envie o seu PR. ;-)
+#### Contribuições
+Caso identifique pontos que possam ser aprimorados envie o seu PR. ;-)
 
 
-## License
+#### License
 [MIT](https://choosealicense.com/licenses/mit/)
