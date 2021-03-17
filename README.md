@@ -1,89 +1,33 @@
-## Composer Full
+[![pipeline status](https://github.com/viniciusmattosrj/composer-full/badges/releaseCandidate/pipeline.svg)](https://github.com/viniciusmattosrj/composer-full/commits/releaseCandidate)
 
- - <a href="https://www.youtube.com/watch?v=_n57YVUVT2A&list=PLVSNL1PHDWvSrVzXyKxBc5cPM4sU7-c2T">Curso Composer</a> - Carlos Ferreira da Especializa TI
-
-
-### Requerimentos
+## Requerimentos
 
 - Install <a href="https://docs.docker.com/install/">Docker</a>
-
 - Install <a href="https://docs.docker.com/compose/install/">docker-compose</a>
+- Mysql >= 5.7 ou Postgres >= 11
+- Composer
+- PHP &ge; 7.3.22
 
-- PHP >= 7.1
+### Tecnologias Utilizadas
 
-- Postgres >= 11 ou Mysql >= 5.7
+- PHPUnit &ge; 7.5.\*
 
+### Sobre
 
-#### Instalação
-Realizar o git clone do projeto:
-```
-git@github.com:viniciusmattosrj/composer-full.git
-```
+- <a href="https://www.youtube.com/watch?v=_n57YVUVT2A&list=PLVSNL1PHDWvSrVzXyKxBc5cPM4sU7-c2T">Curso Composer</a> - Carlos Ferreira da Especializa TI
 
-Para que o git não considere alterações de permissão como modificações a serem rastreadas, execute:
-```
-git config core.fileMode false
-```
+### Requisitos de cloud(nuvem)
 
-Entre pelo terminal na pasta do projeto e rode:
-```
-cp -v ./docker-compose-example.php  ./docker-compose.php
-```
+- _PHP-FPM_: external Nginx access will point towards this daemon
 
-Agora suba o servidor:
-```
-docker-compose up -d
-```
+Veja `.env.example` as [instruções](docs/installation.md) sobre as variáveis de ambiente.
 
-Em outra aba do terminal se conecte no container do php e inicie um servidor built in do PHP
-```
-docker exec -it php bash
-php -S 10.11.0.11:8008 -t public
-```
+Para instalação verifique **[installation documentation](docs/installation.md)**.
 
-No browser digite http://10.11.0.11:8008
+### Contribuições
 
-Criando banco dados postgres: 
+Caso identifique pontos que possam ser aprimorados, será um prazer analisar o seu PR. ;-)
 
-```
-docker exec -it postgres bash
-psql -U webadm -c "CREATE DATABASE composer_full";
-```
+### License
 
-Realizando a importação dump sql para a base criada:
-```
-psql -U webadm composer_full < /var/lib/postgresql/sqlscript/composer_full.pgsql
-```
-
-Para o acesso no <strong>POSTGRES</strong> database administration tool, use http://localhost:5050 e use as credênciais abaixo:
-
-  - server:
-  - username:
-  - password:
-
-
-Criando banco dados postgres: 
-
-```
-docker exec -it mysql bash
-mysql -u root -c "CREATE DATABASE composer_full;";
-```
-
-Realizando a importação dump sql para a base criada:
-```
-mysql -u root -p composer_full < /var/lib/mysql57/composer_full.sql
-```
-
-Para o acesso no <strong>MYSQL</strong> database administration tool, use http://localhost:8080 e use as credênciais abaixo:
-
-  - server:
-  - username:
-  - password:
-
-
-#### Contribuições
-Caso identifique pontos que possam ser aprimorados envie o seu PR. ;-)
-
-
-#### License
 [MIT](https://choosealicense.com/licenses/mit/)
