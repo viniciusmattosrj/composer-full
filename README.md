@@ -8,10 +8,6 @@
 - Composer
 - PHP &ge; 7.3.22
 
-### Tecnologias Utilizadas
-
-- PHPUnit &ge; 7.5.\*
-
 ### Sobre
 
 - <a href="https://www.youtube.com/watch?v=_n57YVUVT2A&list=PLVSNL1PHDWvSrVzXyKxBc5cPM4sU7-c2T">Curso Composer</a> - Carlos Ferreira da Especializa TI
